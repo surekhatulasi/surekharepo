@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+     
+      #See more {
+        display: none;
+      }
+
+      body {
+        margin: 0;
+        background: MediumSeaGreen;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      /* Style the list items */
+      ul li {
+        margin: auto;
+        display: block;
+        width: 20%;
+        border: 3px solid green;
+        padding: 10px;
+        background-color: white;
+      }
+
+      
+
+      /* Style the header */
+      .header {
+        background-color: MediumSeaGreen;
+        padding: 30px 40px;
+        color: white;
+        text-align: center;
+      }
+
+      /* Clear floats after the header */
+      .header:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Style the input */
+      input {
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        width: 40%;
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      /* Style the "Add" button */
+      .addBtn {
+        padding: 10px;
+        width: 55%;
+        background: green;
+        text-align: center;
+        font-size: 26px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 10;
+      }
+
+      .addBtn:hover {
+        background-color: #bbb;
+      }
+
+      .interface {
+        position: absolute;
+        top: 60%;
+        right: 3%;
+        transform: translate(0%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDIV" class="header">
+      <span id="addBtnId" class="addBtn">Add+ </span
+      ><br /><br /><br /><br />
+      <input type="text" id="myInput" placeholder="Add Tasks"/>
+    </div>
+    <ul id="myUL">
+      <li>Task 1........</li>
+      <li>Task 2........</li>
+      <li>Task 3........</li>
+      <span id="dots">...</span>
+      
+    </ul>
+    <form>
+      <div class="interface">
+        <button
+          
+          id="myBtn"
+          style="display: none"
+          formaction="C:\Users\3K\Desktop\index.html"
+        >
+          See more
+        </button>
+      </div>
+    </form>
+
+    <script>
+      
+      const targetDiv = document.getElementById("myBtn");
+      const addBtn = document.getElementById("addBtnId");
+      addBtn.onclick = function () {
+      
+        if (targetDiv.style.display === "none") {
+          targetDiv.style.display = "block";
+        }
+      };
+
+      
+    </script>
+  </body>
+</html>
